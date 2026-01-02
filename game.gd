@@ -32,11 +32,12 @@ func update_cells(canvas):
 	var x_ind = 0
 	var y_ind = 0
 	for row in canvas.get_children():
-		#print(row)
 		for cell in row.get_children():
-			#print(cell)
-			#print("initializing cell at x" + str(x_ind) + ", y" + str(y_ind))
 			cell.set_cell(demo_level[y_ind][x_ind])
 			x_ind += 1
 		y_ind += 1
 		x_ind = 0
+
+# execute action commands from array (queue?) and cycle the turn
+func cycle_turn():
+	pass

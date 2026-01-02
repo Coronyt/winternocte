@@ -1,6 +1,4 @@
-extends Panel
+extends Control
 
 func _ready():
-	# for each row, init index
-	
 	pass
