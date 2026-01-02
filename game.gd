@@ -1,5 +1,8 @@
 extends Node
 
+var _canvas: Canvas
+var _entities: EntityGroup
+
 var demo_level = [
 	[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 	[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -44,6 +47,16 @@ func render_entities(canvas: Canvas, entities: EntityGroup):
 	for entity: Entity in entities.get_children():
 		canvas.get_cell(entity.pos).set_entity(entity.glyph)
 
+var action_queue: Array[Action] = []
+
 # execute action commands from array (queue?) and cycle the turn
 func cycle_turn():
-	pass
+	while(action_queue):
+		var action: Action = action_queue.pop_front()
+		action.perform()
+	# afterwards re-render cells and entities
+	# TODO
+	#print(_canvas)
+	#print(_entities)
+	Game.update_cells(_canvas) # TODO - pass level as arg
+	Game.render_entities(_canvas, _entities)

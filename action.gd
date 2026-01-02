@@ -1,3 +1,7 @@
+@abstract()
 class_name Action extends Node
 
-# TODO
+var actor: Entity
+
+@abstract()
+func perform()
