@@ -1,10 +1,10 @@
-extends Panel
+class_name Cell extends Panel
 
-@onready var _body = $_cell_body
+@onready var _body: RichTextLabel = $_cell_body
 
-func set_cell(cell):
-	_body.text = Atlas.cells[cell]
+func set_cell(cell_id: int):
+	_body.text = Atlas.cells[cell_id]
 
 # to render entity glyph over cell tile
-func set_entity(entity):
-	_body.text = Atlas.entities[entity]
+func set_entity(entity_id: int):
+	_body.text = Atlas.entities[entity_id]

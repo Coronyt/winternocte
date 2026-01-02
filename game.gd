@@ -27,23 +27,21 @@ var demo_level = [
 	[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 ]
 
+# TODO - the level should be passed as an argument to update_cells
 # update all cells in the canvas to match the currently loaded level
-func update_cells(canvas):
-	var x_ind = 0
-	var y_ind = 0
-	for row in canvas.get_children():
-		for cell in row.get_children():
+func update_cells(canvas: Canvas):
+	var x_ind: int = 0
+	var y_ind: int = 0
+	for row: Row in canvas.get_children():
+		for cell: Cell in row.get_children():
 			cell.set_cell(demo_level[y_ind][x_ind])
 			x_ind += 1
 		y_ind += 1
 		x_ind = 0
 
 # will render all entities in the given list over the canvas
-func render_entities(canvas, entities):
-	for entity in entities:
-		#print(entity.pos.x)
-		#print(entity.pos.y)
-		#print(canvas.get_cell(entity.pos))
+func render_entities(canvas: Canvas, entities: EntityGroup):
+	for entity: Entity in entities.get_children():
 		canvas.get_cell(entity.pos).set_entity(entity.glyph)
 
 # execute action commands from array (queue?) and cycle the turn
