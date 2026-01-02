@@ -38,6 +38,14 @@ func update_cells(canvas):
 		y_ind += 1
 		x_ind = 0
 
+# will render all entities in the given list over the canvas
+func render_entities(canvas, entities):
+	for entity in entities:
+		#print(entity.pos.x)
+		#print(entity.pos.y)
+		#print(canvas.get_cell(entity.pos))
+		canvas.get_cell(entity.pos).set_entity(entity.glyph)
+
 # execute action commands from array (queue?) and cycle the turn
 func cycle_turn():
 	pass
