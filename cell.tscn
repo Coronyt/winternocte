@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d36ohtv1oymd8"]
+
+[ext_resource type="Script" uid="uid://drpmjx1gu4pq" path="res://cell.gd" id="1_gwrgs"]
+[ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://TerminusTTFWindows-4.49.3.ttf" id="1_yh0nt"]
+
+[node name="_cell" type="Panel"]
+offset_right = 20.0
+offset_bottom = 30.0
+script = ExtResource("1_gwrgs")
+
+[node name="_cell_body" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 30.0
+theme_override_fonts/normal_font = ExtResource("1_yh0nt")
+theme_override_font_sizes/normal_font_size = 24
+text = "X"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

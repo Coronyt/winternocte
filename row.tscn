@@ -1,0 +1,330 @@
+[gd_scene load_steps=4 format=3 uid="uid://blmdix2uy4n10"]
+
+[ext_resource type="PackedScene" uid="uid://d36ohtv1oymd8" path="res://cell.tscn" id="1_go4wn"]
+[ext_resource type="Script" uid="uid://cwsgqribbfo4l" path="res://row.gd" id="1_rk5gk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3sb7"]
+
+[node name="_row" type="Panel"]
+offset_right = 1280.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_f3sb7")
+script = ExtResource("1_rk5gk")
+
+[node name="_cell_1" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+
+[node name="_cell_2" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 40.0
+
+[node name="_cell_3" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 60.0
+
+[node name="_cell_4" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 80.0
+
+[node name="_cell_5" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 100.0
+
+[node name="_cell_6" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 120.0
+
+[node name="_cell_7" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 120.0
+offset_right = 140.0
+
+[node name="_cell_8" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 140.0
+offset_right = 160.0
+
+[node name="_cell_9" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 160.0
+offset_right = 180.0
+
+[node name="_cell_10" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 180.0
+offset_right = 200.0
+
+[node name="_cell_11" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 220.0
+
+[node name="_cell_12" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 220.0
+offset_right = 240.0
+
+[node name="_cell_13" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 240.0
+offset_right = 260.0
+
+[node name="_cell_14" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 260.0
+offset_right = 280.0
+
+[node name="_cell_15" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 300.0
+
+[node name="_cell_16" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 320.0
+
+[node name="_cell_17" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 340.0
+
+[node name="_cell_18" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 340.0
+offset_right = 360.0
+
+[node name="_cell_19" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 380.0
+
+[node name="_cell_20" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 380.0
+offset_right = 400.0
+
+[node name="_cell_21" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 400.0
+offset_right = 420.0
+
+[node name="_cell_22" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 420.0
+offset_right = 440.0
+
+[node name="_cell_23" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 440.0
+offset_right = 460.0
+
+[node name="_cell_24" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 460.0
+offset_right = 480.0
+
+[node name="_cell_25" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 480.0
+offset_right = 500.0
+
+[node name="_cell_26" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 500.0
+offset_right = 520.0
+
+[node name="_cell_27" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 520.0
+offset_right = 540.0
+
+[node name="_cell_28" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 540.0
+offset_right = 560.0
+
+[node name="_cell_29" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 560.0
+offset_right = 580.0
+
+[node name="_cell_30" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 580.0
+offset_right = 600.0
+
+[node name="_cell_31" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 600.0
+offset_right = 620.0
+
+[node name="_cell_32" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 620.0
+offset_right = 640.0
+
+[node name="_cell_33" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 660.0
+
+[node name="_cell_34" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 660.0
+offset_right = 680.0
+
+[node name="_cell_35" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 680.0
+offset_right = 700.0
+
+[node name="_cell_36" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 700.0
+offset_right = 720.0
+
+[node name="_cell_37" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 720.0
+offset_right = 740.0
+
+[node name="_cell_38" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 740.0
+offset_right = 760.0
+
+[node name="_cell_39" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 760.0
+offset_right = 780.0
+
+[node name="_cell_40" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 780.0
+offset_right = 800.0
+
+[node name="_cell_41" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 800.0
+offset_right = 820.0
+
+[node name="_cell_42" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 820.0
+offset_right = 840.0
+
+[node name="_cell_43" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 840.0
+offset_right = 860.0
+
+[node name="_cell_44" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 860.0
+offset_right = 880.0
+
+[node name="_cell_45" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 880.0
+offset_right = 900.0
+
+[node name="_cell_46" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 900.0
+offset_right = 920.0
+
+[node name="_cell_47" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 920.0
+offset_right = 940.0
+
+[node name="_cell_48" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 940.0
+offset_right = 960.0
+
+[node name="_cell_49" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 960.0
+offset_right = 980.0
+
+[node name="_cell_50" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 980.0
+offset_right = 1000.0
+
+[node name="_cell_51" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1000.0
+offset_right = 1020.0
+
+[node name="_cell_52" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1020.0
+offset_right = 1040.0
+
+[node name="_cell_53" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1040.0
+offset_right = 1060.0
+
+[node name="_cell_54" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1060.0
+offset_right = 1080.0
+
+[node name="_cell_55" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1080.0
+offset_right = 1100.0
+
+[node name="_cell_56" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1100.0
+offset_right = 1120.0
+
+[node name="_cell_57" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1120.0
+offset_right = 1140.0
+
+[node name="_cell_58" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1140.0
+offset_right = 1160.0
+
+[node name="_cell_59" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1160.0
+offset_right = 1180.0
+
+[node name="_cell_60" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1180.0
+offset_right = 1200.0
+
+[node name="_cell_61" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1200.0
+offset_right = 1220.0
+
+[node name="_cell_62" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1220.0
+offset_right = 1240.0
+
+[node name="_cell_63" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1240.0
+offset_right = 1260.0
+
+[node name="_cell_64" parent="." instance=ExtResource("1_go4wn")]
+layout_mode = 0
+offset_left = 1260.0
+offset_right = 1280.0
