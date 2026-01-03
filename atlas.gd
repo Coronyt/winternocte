@@ -1,11 +1,15 @@
 extends Node
 
-# TODO - "String" will eventually be replaced by a custom class holding cell/entity traits
-var cells: Dictionary[int, String] = {
-	1 : ".", # ground
-	2 : "#", # wall
+# for simple traits there's no need to instance a unique object for every cell/entity
+var GenericCollider = Collidable.new()
+
+var cells: Dictionary[int, Definition] = {
+	1 : Definition.new(".", []), # ground
+	2 : Definition.new("#", [
+		GenericCollider,
+	]), # wall
 }
 
-var entities: Dictionary[int, String] = {
-	1 : "@", # player
+var entities: Dictionary[int, Definition] = {
+	1 : Definition.new("@", []), # player
 }

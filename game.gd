@@ -45,7 +45,7 @@ func update_cells(canvas: Canvas):
 # will render all entities in the given list over the canvas
 func render_entities(canvas: Canvas, entities: EntityGroup):
 	for entity: Entity in entities.get_children():
-		canvas.get_cell(entity.pos).set_entity(entity.glyph)
+		canvas.get_cell(entity.pos).set_entity(entity.id)
 
 var action_queue: Array[Action] = []
 

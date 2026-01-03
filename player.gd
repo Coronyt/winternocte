@@ -4,7 +4,7 @@ func _ready():
 	# temporary initial values
 	self.pos.x = 35
 	self.pos.y = 19
-	self.glyph = 1
+	self.id = 1
 
 func move_player(direction: Game.Direction):
 	var action = Move.new(self, direction)

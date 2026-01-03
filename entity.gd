@@ -4,4 +4,4 @@ class_name Entity extends Node
 var pos: Position = Position.new(1, 1) # default 1,1
 
 # should map to an ASCII character via Atlas.entities
-var glyph: int
+var id: int
