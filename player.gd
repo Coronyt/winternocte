@@ -5,17 +5,18 @@ func _ready():
 	self.pos.y = 19
 	self.glyph = 1
 
+func move_player(direction: Game.Direction):
+	var action = Move.new(self, direction)
+	Game.action_queue.append(action)
+	Game.cycle_turn()
+
 func _process(_delta):
 	# moving will always force a turn cycle
 	if Input.is_action_just_pressed("up"):
-		var action = Move.new(self, Game.Direction.UP)
-		#action.dir = "UP"
-		#action.actor = self
-		Game.action_queue.append(action)
-		Game.cycle_turn()
+		move_player(Game.Direction.UP)
 	if Input.is_action_just_pressed("down"):
-		pass
+		move_player(Game.Direction.DOWN)
 	if Input.is_action_just_pressed("left"):
-		pass
+		move_player(Game.Direction.LEFT)
 	if Input.is_action_just_pressed("right"):
-		pass
+		move_player(Game.Direction.RIGHT)

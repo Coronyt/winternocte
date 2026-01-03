@@ -6,5 +6,5 @@ extends Node
 func _ready():
 	Game.update_cells(_canvas) # TODO - pass level as arg
 	Game.render_entities(_canvas, _entities)
-	Game._canvas = _canvas
-	Game._entities = _entities
+	Game.active_canvas = _canvas
+	Game.active_entities = _entities

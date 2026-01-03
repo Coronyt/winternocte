@@ -12,8 +12,11 @@ func perform():
 		print("up command is being performed")
 		self.actor.pos.y = self.actor.pos.y - 1
 	if self.dir == Game.Direction.DOWN:
-		pass
+		print("down command is being performed")
+		self.actor.pos.y = self.actor.pos.y + 1
 	if self.dir == Game.Direction.LEFT:
-		pass
+		print("left command is being performed")
+		self.actor.pos.x = self.actor.pos.x - 1
 	if self.dir == Game.Direction.RIGHT:
-		pass
+		print("right command is being performed")
+		self.actor.pos.x = self.actor.pos.x + 1

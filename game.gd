@@ -53,9 +53,10 @@ enum Direction {UP, DOWN, LEFT, RIGHT}
 
 # execute action commands from the queue and cycle the turn
 func cycle_turn():
+	# TODO - right here, cycle_turn should append actions to the queue for each sentient entity in the level
 	while(action_queue):
 		var action: Action = action_queue.pop_front()
 		action.perform()
 	# afterwards re-render cells and entities
-	Game.update_cells(active_canvas) # TODO - this code is copy-pasted from world.gd, should probably be func
-	Game.render_entities(active_canvas, active_entities)
+	update_cells(active_canvas) # TODO - this code is copy-pasted from world.gd, should probably be func
+	render_entities(active_canvas, active_entities)
