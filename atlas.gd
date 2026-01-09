@@ -8,6 +8,9 @@ var cells: Dictionary[int, Definition] = {
 	2 : Definition.new("#", [
 		GenericCollider,
 	]), # wall
+	3 : Definition.new("+", [
+		Openable.new("-")
+	]), # door
 }
 
 var entities: Dictionary[int, Definition] = {
