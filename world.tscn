@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhi3cercrys64"]
+[gd_scene load_steps=8 format=3 uid="uid://dhi3cercrys64"]
 
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://TerminusTTFWindows-4.49.3.ttf" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://world.gd" id="1_tlwt5"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bemlpqgnhsqna" path="res://canvas.gd" id="3_aqk2v"]
 [ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://player.gd" id="5_036b0"]
 [ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://entity_group.gd" id="5_dwbse"]
+[ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://door.gd" id="7_pkg7o"]
 
 [node name="_world" type="Node"]
 script = ExtResource("1_tlwt5")
@@ -1351,6 +1352,16 @@ offset_bottom = 720.0
 
 [node name="_entities" type="Node" parent="."]
 script = ExtResource("5_dwbse")
+
+[node name="Door1" type="Node" parent="_entities"]
+script = ExtResource("7_pkg7o")
+pos_x = 8
+pos_y = 10
+
+[node name="Door2" type="Node" parent="_entities"]
+script = ExtResource("7_pkg7o")
+pos_x = 32
+pos_y = 9
 
 [node name="Player" type="Node" parent="_entities"]
 script = ExtResource("5_036b0")

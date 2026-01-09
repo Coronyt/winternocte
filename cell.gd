@@ -4,11 +4,20 @@ class_name Cell extends Panel
 
 var id: int
 
+var entities: Array[Entity] = []
+
+func _ready():
+	self.entities = []
+
 func set_cell(cell_id: int):
 	_body.text = Atlas.cells[cell_id].glyph
 	self.id = cell_id
 
 # to render entity glyph over cell tile
-func set_entity(entity_id: int):
-	_body.text = Atlas.entities[entity_id].glyph
-	# TODO - should the cell object keep a list of entities which are "on" it?
+func set_entity(entity: Entity):
+	_body.text = Atlas.entities[entity.id].glyph
+	# append to local entity list
+	self.entities.append(entity)
+
+func reset_entities():
+	self.entities = []

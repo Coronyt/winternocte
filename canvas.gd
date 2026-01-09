@@ -9,7 +9,7 @@ func _ready():
 			_cells[row].append(cell)
 
 # takes in a position and returns the cell at that position
-func get_cell(pos: Position):
+func get_cell(pos: Position) -> Cell:
 	var i: int = pos.x
 	var j: int = pos.y
 	return _cells[_cells.keys()[j]][i]

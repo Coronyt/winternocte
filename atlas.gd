@@ -8,11 +8,13 @@ var cells: Dictionary[int, Definition] = {
 	2 : Definition.new("#", [
 		GenericCollider,
 	]), # wall
-	3 : Definition.new("+", [
-		Openable.new("-")
-	]), # door
+	#3 : Definition.new("+", [
+		#Openable.new("-")
+	#]), # door
 }
 
 var entities: Dictionary[int, Definition] = {
 	1 : Definition.new("@", []), # player
+	2 : Definition.new("+", []), # door (closed)
+	3 : Definition.new("-", []), # door (open)
 }

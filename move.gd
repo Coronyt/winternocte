@@ -20,6 +20,11 @@ func check_collision(dir: Game.Direction) -> bool:
 		cand_x += 1
 	var cand_pos = Position.new(cand_x, cand_y)
 	var cand_cell = Game.active_canvas.get_cell(cand_pos)
+	print(cand_cell.entities)
+	# checking for entities in the target cell
+	for entity in cand_cell.entities:
+		if entity is Door:
+			entity.open()
 	if Atlas.cells[cand_cell.id].can_collide:
 		return false
 	return true
