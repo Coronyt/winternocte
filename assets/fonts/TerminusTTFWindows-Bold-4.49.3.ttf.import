@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dcu1eld6ikg3h"
-path="res://.godot/imported/TerminusTTFWindows-Italic-4.49.3.ttf-085ced097eb46c5bc08c840c170992e5.fontdata"
+uid="uid://bahtpdnlykb4k"
+path="res://.godot/imported/TerminusTTFWindows-Bold-4.49.3.ttf-550468b54b031f35cf0edde24082d310.fontdata"
 
 [deps]
 
-source_file="res://TerminusTTFWindows-Italic-4.49.3.ttf"
-dest_files=["res://.godot/imported/TerminusTTFWindows-Italic-4.49.3.ttf-085ced097eb46c5bc08c840c170992e5.fontdata"]
+source_file="res://assets/fonts/TerminusTTFWindows-Bold-4.49.3.ttf"
+dest_files=["res://.godot/imported/TerminusTTFWindows-Bold-4.49.3.ttf-550468b54b031f35cf0edde24082d310.fontdata"]
 
 [params]
 

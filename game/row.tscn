@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://blmdix2uy4n10"]
 
-[ext_resource type="PackedScene" uid="uid://d36ohtv1oymd8" path="res://cell.tscn" id="1_go4wn"]
-[ext_resource type="Script" uid="uid://cwsgqribbfo4l" path="res://row.gd" id="1_rk5gk"]
+[ext_resource type="PackedScene" uid="uid://d36ohtv1oymd8" path="res://game/cell.tscn" id="1_go4wn"]
+[ext_resource type="Script" uid="uid://cwsgqribbfo4l" path="res://src/world/row.gd" id="1_rk5gk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3sb7"]
 

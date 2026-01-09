@@ -1,15 +1,15 @@
 [gd_scene load_steps=8 format=3 uid="uid://dhi3cercrys64"]
 
-[ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://TerminusTTFWindows-4.49.3.ttf" id="1_f3sb7"]
-[ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://world.gd" id="1_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://blmdix2uy4n10" path="res://row.tscn" id="2_fj7yv"]
-[ext_resource type="Script" uid="uid://bemlpqgnhsqna" path="res://canvas.gd" id="3_aqk2v"]
-[ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://player.gd" id="5_036b0"]
-[ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://entity_group.gd" id="5_dwbse"]
-[ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://door.gd" id="7_pkg7o"]
+[ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://src/world/world.gd" id="1_juwqy"]
+[ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="2_l88xf"]
+[ext_resource type="Script" uid="uid://bemlpqgnhsqna" path="res://src/world/canvas.gd" id="3_8afa7"]
+[ext_resource type="PackedScene" uid="uid://blmdix2uy4n10" path="res://game/row.tscn" id="4_otli2"]
+[ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://src/entity_group.gd" id="5_7q0dj"]
+[ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://src/entities/door.gd" id="6_sdcdd"]
+[ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://src/entities/player.gd" id="7_xyrhu"]
 
 [node name="_world" type="Node"]
-script = ExtResource("1_tlwt5")
+script = ExtResource("1_juwqy")
 
 [node name="_rulers" type="Control" parent="."]
 layout_mode = 3
@@ -26,7 +26,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_top = -30.0
 offset_right = 20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "1"
 scroll_active = false
@@ -40,7 +40,7 @@ offset_left = 20.0
 offset_top = -50.0
 offset_right = 40.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "2"
 scroll_active = false
@@ -53,7 +53,7 @@ layout_mode = 0
 offset_left = 40.0
 offset_top = -30.0
 offset_right = 60.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "3"
 scroll_active = false
@@ -67,7 +67,7 @@ offset_left = 60.0
 offset_top = -50.0
 offset_right = 80.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "4"
 scroll_active = false
@@ -80,7 +80,7 @@ layout_mode = 0
 offset_left = 80.0
 offset_top = -30.0
 offset_right = 100.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "5"
 scroll_active = false
@@ -94,7 +94,7 @@ offset_left = 100.0
 offset_top = -50.0
 offset_right = 120.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "6"
 scroll_active = false
@@ -107,7 +107,7 @@ layout_mode = 0
 offset_left = 120.0
 offset_top = -30.0
 offset_right = 140.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "7"
 scroll_active = false
@@ -121,7 +121,7 @@ offset_left = 140.0
 offset_top = -50.0
 offset_right = 160.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "8"
 scroll_active = false
@@ -134,7 +134,7 @@ layout_mode = 0
 offset_left = 160.0
 offset_top = -30.0
 offset_right = 180.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "9"
 scroll_active = false
@@ -148,7 +148,7 @@ offset_left = 180.0
 offset_top = -50.0
 offset_right = 200.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "10"
 scroll_active = false
@@ -161,7 +161,7 @@ layout_mode = 0
 offset_left = 200.0
 offset_top = -30.0
 offset_right = 220.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "11"
 scroll_active = false
@@ -175,7 +175,7 @@ offset_left = 220.0
 offset_top = -50.0
 offset_right = 240.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "12"
 scroll_active = false
@@ -188,7 +188,7 @@ layout_mode = 0
 offset_left = 240.0
 offset_top = -30.0
 offset_right = 260.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "13"
 scroll_active = false
@@ -202,7 +202,7 @@ offset_left = 260.0
 offset_top = -50.0
 offset_right = 280.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "14"
 scroll_active = false
@@ -215,7 +215,7 @@ layout_mode = 0
 offset_left = 280.0
 offset_top = -30.0
 offset_right = 300.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "15"
 scroll_active = false
@@ -229,7 +229,7 @@ offset_left = 300.0
 offset_top = -50.0
 offset_right = 320.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "16"
 scroll_active = false
@@ -242,7 +242,7 @@ layout_mode = 0
 offset_left = 320.0
 offset_top = -30.0
 offset_right = 340.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "17"
 scroll_active = false
@@ -256,7 +256,7 @@ offset_left = 340.0
 offset_top = -50.0
 offset_right = 360.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "18"
 scroll_active = false
@@ -269,7 +269,7 @@ layout_mode = 0
 offset_left = 360.0
 offset_top = -30.0
 offset_right = 380.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "19"
 scroll_active = false
@@ -283,7 +283,7 @@ offset_left = 380.0
 offset_top = -50.0
 offset_right = 400.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "20"
 scroll_active = false
@@ -296,7 +296,7 @@ layout_mode = 0
 offset_left = 400.0
 offset_top = -30.0
 offset_right = 420.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "21"
 scroll_active = false
@@ -310,7 +310,7 @@ offset_left = 420.0
 offset_top = -50.0
 offset_right = 440.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "22"
 scroll_active = false
@@ -323,7 +323,7 @@ layout_mode = 0
 offset_left = 440.0
 offset_top = -30.0
 offset_right = 460.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "23"
 scroll_active = false
@@ -337,7 +337,7 @@ offset_left = 460.0
 offset_top = -50.0
 offset_right = 480.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "24"
 scroll_active = false
@@ -350,7 +350,7 @@ layout_mode = 0
 offset_left = 480.0
 offset_top = -30.0
 offset_right = 500.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "25"
 scroll_active = false
@@ -364,7 +364,7 @@ offset_left = 500.0
 offset_top = -50.0
 offset_right = 520.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "26"
 scroll_active = false
@@ -377,7 +377,7 @@ layout_mode = 0
 offset_left = 520.0
 offset_top = -30.0
 offset_right = 540.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "27"
 scroll_active = false
@@ -391,7 +391,7 @@ offset_left = 540.0
 offset_top = -50.0
 offset_right = 560.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "28"
 scroll_active = false
@@ -404,7 +404,7 @@ layout_mode = 0
 offset_left = 560.0
 offset_top = -30.0
 offset_right = 580.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "29"
 scroll_active = false
@@ -418,7 +418,7 @@ offset_left = 580.0
 offset_top = -50.0
 offset_right = 600.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "30"
 scroll_active = false
@@ -431,7 +431,7 @@ layout_mode = 0
 offset_left = 600.0
 offset_top = -30.0
 offset_right = 620.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "31"
 scroll_active = false
@@ -445,7 +445,7 @@ offset_left = 620.0
 offset_top = -50.0
 offset_right = 640.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "32"
 scroll_active = false
@@ -458,7 +458,7 @@ layout_mode = 0
 offset_left = 640.0
 offset_top = -30.0
 offset_right = 660.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "33"
 scroll_active = false
@@ -472,7 +472,7 @@ offset_left = 660.0
 offset_top = -50.0
 offset_right = 680.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "34"
 scroll_active = false
@@ -485,7 +485,7 @@ layout_mode = 0
 offset_left = 680.0
 offset_top = -30.0
 offset_right = 700.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "35"
 scroll_active = false
@@ -499,7 +499,7 @@ offset_left = 700.0
 offset_top = -50.0
 offset_right = 720.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "36"
 scroll_active = false
@@ -512,7 +512,7 @@ layout_mode = 0
 offset_left = 720.0
 offset_top = -30.0
 offset_right = 740.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "37"
 scroll_active = false
@@ -526,7 +526,7 @@ offset_left = 740.0
 offset_top = -50.0
 offset_right = 760.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "38"
 scroll_active = false
@@ -539,7 +539,7 @@ layout_mode = 0
 offset_left = 760.0
 offset_top = -30.0
 offset_right = 780.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "39"
 scroll_active = false
@@ -553,7 +553,7 @@ offset_left = 780.0
 offset_top = -50.0
 offset_right = 800.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "40"
 scroll_active = false
@@ -566,7 +566,7 @@ layout_mode = 0
 offset_left = 800.0
 offset_top = -30.0
 offset_right = 820.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "41"
 scroll_active = false
@@ -580,7 +580,7 @@ offset_left = 820.0
 offset_top = -50.0
 offset_right = 840.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "42"
 scroll_active = false
@@ -593,7 +593,7 @@ layout_mode = 0
 offset_left = 840.0
 offset_top = -30.0
 offset_right = 860.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "43"
 scroll_active = false
@@ -607,7 +607,7 @@ offset_left = 860.0
 offset_top = -50.0
 offset_right = 880.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "44"
 scroll_active = false
@@ -620,7 +620,7 @@ layout_mode = 0
 offset_left = 880.0
 offset_top = -30.0
 offset_right = 900.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "45"
 scroll_active = false
@@ -634,7 +634,7 @@ offset_left = 900.0
 offset_top = -50.0
 offset_right = 920.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "46"
 scroll_active = false
@@ -647,7 +647,7 @@ layout_mode = 0
 offset_left = 920.0
 offset_top = -30.0
 offset_right = 940.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "47"
 scroll_active = false
@@ -661,7 +661,7 @@ offset_left = 940.0
 offset_top = -50.0
 offset_right = 960.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "48"
 scroll_active = false
@@ -674,7 +674,7 @@ layout_mode = 0
 offset_left = 960.0
 offset_top = -30.0
 offset_right = 980.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "49"
 scroll_active = false
@@ -688,7 +688,7 @@ offset_left = 980.0
 offset_top = -50.0
 offset_right = 1000.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "50"
 scroll_active = false
@@ -701,7 +701,7 @@ layout_mode = 0
 offset_left = 1000.0
 offset_top = -30.0
 offset_right = 1020.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "51"
 scroll_active = false
@@ -715,7 +715,7 @@ offset_left = 1020.0
 offset_top = -50.0
 offset_right = 1040.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "52"
 scroll_active = false
@@ -728,7 +728,7 @@ layout_mode = 0
 offset_left = 1040.0
 offset_top = -30.0
 offset_right = 1060.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "53"
 scroll_active = false
@@ -742,7 +742,7 @@ offset_left = 1060.0
 offset_top = -50.0
 offset_right = 1080.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "54"
 scroll_active = false
@@ -755,7 +755,7 @@ layout_mode = 0
 offset_left = 1080.0
 offset_top = -30.0
 offset_right = 1100.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "55"
 scroll_active = false
@@ -769,7 +769,7 @@ offset_left = 1100.0
 offset_top = -50.0
 offset_right = 1120.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "56"
 scroll_active = false
@@ -782,7 +782,7 @@ layout_mode = 0
 offset_left = 1120.0
 offset_top = -30.0
 offset_right = 1140.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "57"
 scroll_active = false
@@ -796,7 +796,7 @@ offset_left = 1140.0
 offset_top = -50.0
 offset_right = 1160.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "58"
 scroll_active = false
@@ -809,7 +809,7 @@ layout_mode = 0
 offset_left = 1160.0
 offset_top = -30.0
 offset_right = 1180.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "59"
 scroll_active = false
@@ -823,7 +823,7 @@ offset_left = 1180.0
 offset_top = -50.0
 offset_right = 1200.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "60"
 scroll_active = false
@@ -836,7 +836,7 @@ layout_mode = 0
 offset_left = 1200.0
 offset_top = -30.0
 offset_right = 1220.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "61"
 scroll_active = false
@@ -850,7 +850,7 @@ offset_left = 1220.0
 offset_top = -50.0
 offset_right = 1240.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "62"
 scroll_active = false
@@ -863,7 +863,7 @@ layout_mode = 0
 offset_left = 1240.0
 offset_top = -30.0
 offset_right = 1260.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "63"
 scroll_active = false
@@ -877,7 +877,7 @@ offset_left = 1260.0
 offset_top = -50.0
 offset_right = 1280.0
 offset_bottom = -20.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "64"
 scroll_active = false
@@ -895,7 +895,7 @@ layout_mode = 0
 offset_left = -25.0
 offset_right = -5.0
 offset_bottom = 30.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "1"
 scroll_active = false
@@ -909,7 +909,7 @@ offset_left = -40.0
 offset_top = 30.0
 offset_right = -20.0
 offset_bottom = 60.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "2"
 scroll_active = false
@@ -923,7 +923,7 @@ offset_left = -25.0
 offset_top = 60.0
 offset_right = -5.0
 offset_bottom = 90.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "3"
 scroll_active = false
@@ -937,7 +937,7 @@ offset_left = -40.0
 offset_top = 90.0
 offset_right = -20.0
 offset_bottom = 120.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "4"
 scroll_active = false
@@ -951,7 +951,7 @@ offset_left = -25.0
 offset_top = 120.0
 offset_right = -5.0
 offset_bottom = 150.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "5"
 scroll_active = false
@@ -965,7 +965,7 @@ offset_left = -40.0
 offset_top = 150.0
 offset_right = -20.0
 offset_bottom = 180.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "6"
 scroll_active = false
@@ -979,7 +979,7 @@ offset_left = -25.0
 offset_top = 180.0
 offset_right = -5.0
 offset_bottom = 210.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "7"
 scroll_active = false
@@ -993,7 +993,7 @@ offset_left = -40.0
 offset_top = 210.0
 offset_right = -20.0
 offset_bottom = 240.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "8"
 scroll_active = false
@@ -1007,7 +1007,7 @@ offset_left = -25.0
 offset_top = 240.0
 offset_right = -5.0
 offset_bottom = 270.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "9"
 scroll_active = false
@@ -1021,7 +1021,7 @@ offset_left = -40.0
 offset_top = 270.0
 offset_right = -20.0
 offset_bottom = 300.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "10"
 scroll_active = false
@@ -1035,7 +1035,7 @@ offset_left = -25.0
 offset_top = 300.0
 offset_right = -5.0
 offset_bottom = 330.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "11"
 scroll_active = false
@@ -1049,7 +1049,7 @@ offset_left = -40.0
 offset_top = 330.0
 offset_right = -20.0
 offset_bottom = 360.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "12"
 scroll_active = false
@@ -1063,7 +1063,7 @@ offset_left = -25.0
 offset_top = 360.0
 offset_right = -5.0
 offset_bottom = 390.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "13"
 scroll_active = false
@@ -1077,7 +1077,7 @@ offset_left = -40.0
 offset_top = 390.0
 offset_right = -20.0
 offset_bottom = 420.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "14"
 scroll_active = false
@@ -1091,7 +1091,7 @@ offset_left = -25.0
 offset_top = 420.0
 offset_right = -5.0
 offset_bottom = 450.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "15"
 scroll_active = false
@@ -1105,7 +1105,7 @@ offset_left = -40.0
 offset_top = 450.0
 offset_right = -20.0
 offset_bottom = 480.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "16"
 scroll_active = false
@@ -1119,7 +1119,7 @@ offset_left = -25.0
 offset_top = 480.0
 offset_right = -5.0
 offset_bottom = 510.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "17"
 scroll_active = false
@@ -1133,7 +1133,7 @@ offset_left = -40.0
 offset_top = 510.0
 offset_right = -20.0
 offset_bottom = 540.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "18"
 scroll_active = false
@@ -1147,7 +1147,7 @@ offset_left = -25.0
 offset_top = 540.0
 offset_right = -5.0
 offset_bottom = 570.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "19"
 scroll_active = false
@@ -1161,7 +1161,7 @@ offset_left = -40.0
 offset_top = 570.0
 offset_right = -20.0
 offset_bottom = 600.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "20"
 scroll_active = false
@@ -1175,7 +1175,7 @@ offset_left = -25.0
 offset_top = 600.0
 offset_right = -5.0
 offset_bottom = 630.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "21"
 scroll_active = false
@@ -1189,7 +1189,7 @@ offset_left = -40.0
 offset_top = 630.0
 offset_right = -20.0
 offset_bottom = 660.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "22"
 scroll_active = false
@@ -1203,7 +1203,7 @@ offset_left = -25.0
 offset_top = 660.0
 offset_right = -5.0
 offset_bottom = 690.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "23"
 scroll_active = false
@@ -1217,7 +1217,7 @@ offset_left = -40.0
 offset_top = 690.0
 offset_right = -20.0
 offset_bottom = 720.0
-theme_override_fonts/normal_font = ExtResource("1_f3sb7")
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
 theme_override_font_sizes/normal_font_size = 24
 text = "24"
 scroll_active = false
@@ -1230,138 +1230,138 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
-script = ExtResource("3_aqk2v")
+script = ExtResource("3_8afa7")
 
-[node name="_row_1" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_1" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 
-[node name="_row_2" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_2" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 30.0
 offset_bottom = 60.0
 
-[node name="_row_3" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_3" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 60.0
 offset_bottom = 90.0
 
-[node name="_row_4" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_4" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 90.0
 offset_bottom = 120.0
 
-[node name="_row_5" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_5" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 120.0
 offset_bottom = 150.0
 
-[node name="_row_6" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_6" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 150.0
 offset_bottom = 180.0
 
-[node name="_row_7" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_7" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 180.0
 offset_bottom = 210.0
 
-[node name="_row_8" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_8" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 210.0
 offset_bottom = 240.0
 
-[node name="_row_9" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_9" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 240.0
 offset_bottom = 270.0
 
-[node name="_row_10" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_10" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 270.0
 offset_bottom = 300.0
 
-[node name="_row_11" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_11" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 300.0
 offset_bottom = 330.0
 
-[node name="_row_12" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_12" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 330.0
 offset_bottom = 360.0
 
-[node name="_row_13" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_13" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 360.0
 offset_bottom = 390.0
 
-[node name="_row_14" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_14" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 390.0
 offset_bottom = 420.0
 
-[node name="_row_15" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_15" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 420.0
 offset_bottom = 450.0
 
-[node name="_row_16" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_16" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 450.0
 offset_bottom = 480.0
 
-[node name="_row_17" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_17" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 480.0
 offset_bottom = 510.0
 
-[node name="_row_18" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_18" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 510.0
 offset_bottom = 540.0
 
-[node name="_row_19" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_19" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 540.0
 offset_bottom = 570.0
 
-[node name="_row_20" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_20" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 570.0
 offset_bottom = 600.0
 
-[node name="_row_21" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_21" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 600.0
 offset_bottom = 630.0
 
-[node name="_row_22" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_22" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 630.0
 offset_bottom = 660.0
 
-[node name="_row_23" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_23" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 660.0
 offset_bottom = 690.0
 
-[node name="_row_24" parent="_canvas" instance=ExtResource("2_fj7yv")]
+[node name="_row_24" parent="_canvas" instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 690.0
 offset_bottom = 720.0
 
 [node name="_entities" type="Node" parent="."]
-script = ExtResource("5_dwbse")
+script = ExtResource("5_7q0dj")
 
 [node name="Door1" type="Node" parent="_entities"]
-script = ExtResource("7_pkg7o")
+script = ExtResource("6_sdcdd")
 pos_x = 8
 pos_y = 10
 
 [node name="Door2" type="Node" parent="_entities"]
-script = ExtResource("7_pkg7o")
+script = ExtResource("6_sdcdd")
 pos_x = 32
 pos_y = 9
 
 [node name="Player" type="Node" parent="_entities"]
-script = ExtResource("5_036b0")
+script = ExtResource("7_xyrhu")
