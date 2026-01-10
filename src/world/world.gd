@@ -1,5 +1,6 @@
 extends Node
 
+@onready var _log: Log = $_log
 @onready var _canvas: Canvas = $_canvas
 @onready var _entities: EntityGroup = $_entities
 

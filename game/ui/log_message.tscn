@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1udaga2s5dh5"]
+
+[ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="1_uehj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4twg"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="_log_message" type="Panel"]
+custom_minimum_size = Vector2(1280, 30)
+theme_override_styles/panel = SubResource("StyleBoxFlat_m4twg")
+
+[node name="_log_message_body" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 1275.0
+offset_bottom = 30.0
+theme_override_fonts/normal_font = ExtResource("1_uehj1")
+theme_override_font_sizes/normal_font_size = 20
+text = "Player opened a door"
+horizontal_alignment = 1
+vertical_alignment = 1
