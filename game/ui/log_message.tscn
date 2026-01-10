@@ -1,13 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1udaga2s5dh5"]
+[gd_scene load_steps=7 format=3 uid="uid://c1udaga2s5dh5"]
 
+[ext_resource type="Script" uid="uid://e5n60kkgp34g" path="res://src/game/ui/log_message.gd" id="1_qaimg"]
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="1_uehj1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4twg"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="Animation" id="Animation_qaimg"]
+resource_name = "fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("_log_message_body:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.012617188, 0.012617188, 0.012617188, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tglb1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("_log_message_body:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s0f1g"]
+_data = {
+&"RESET": SubResource("Animation_tglb1"),
+&"fade": SubResource("Animation_qaimg")
+}
+
 [node name="_log_message" type="Panel"]
 custom_minimum_size = Vector2(1280, 30)
 theme_override_styles/panel = SubResource("StyleBoxFlat_m4twg")
+script = ExtResource("1_qaimg")
 
 [node name="_log_message_body" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -19,3 +58,16 @@ theme_override_font_sizes/normal_font_size = 20
 text = "Player opened a door"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="_log_message_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="_log_message_anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_s0f1g")
+}
+
+[connection signal="timeout" from="_log_message_timer" to="." method="_on_log_message_timer_timeout"]
+[connection signal="animation_finished" from="_log_message_anim" to="." method="_on_log_message_animation_finished"]
