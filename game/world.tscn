@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhi3cercrys64"]
+[gd_scene load_steps=9 format=3 uid="uid://dhi3cercrys64"]
 
 [ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://src/world/world.gd" id="1_juwqy"]
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="2_l88xf"]
@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://src/entity_group.gd" id="5_7q0dj"]
 [ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://src/entities/door.gd" id="6_sdcdd"]
 [ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://src/entities/player.gd" id="7_xyrhu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4twg"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="_world" type="Node"]
 script = ExtResource("1_juwqy")
@@ -1365,3 +1368,50 @@ pos_y = 9
 
 [node name="Player" type="Node" parent="_entities"]
 script = ExtResource("7_xyrhu")
+
+[node name="_log" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 680.0
+offset_right = 40.0
+offset_bottom = 720.0
+
+[node name="_log_window" type="VBoxContainer" parent="_log"]
+layout_mode = 0
+offset_top = -50.0
+offset_right = 1280.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="_log_message1" type="Panel" parent="_log/_log_window"]
+custom_minimum_size = Vector2(1280, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m4twg")
+
+[node name="_log_message_body" type="RichTextLabel" parent="_log/_log_window/_log_message1"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 1275.0
+offset_bottom = 30.0
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
+theme_override_font_sizes/normal_font_size = 20
+text = "Player opened a door"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="_log_message2" type="Panel" parent="_log/_log_window"]
+custom_minimum_size = Vector2(1280, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m4twg")
+
+[node name="_log_message_body" type="RichTextLabel" parent="_log/_log_window/_log_message2"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 1275.0
+offset_bottom = 30.0
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
+theme_override_font_sizes/normal_font_size = 20
+text = "Player picked up x19 seras"
+horizontal_alignment = 1
+vertical_alignment = 1
