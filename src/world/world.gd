@@ -1,11 +1,12 @@
 extends Node
 
-@onready var _log: Log = $_log
 @onready var _canvas: Canvas = $_canvas
 @onready var _entities: EntityGroup = $_entities
+@onready var _log: Log = $_log
 
 func _ready():
 	Game.update_cells(_canvas) # TODO - pass level as arg
 	Game.render_entities(_canvas, _entities)
 	Game.active_canvas = _canvas
 	Game.active_entities = _entities
+	Game.log = _log

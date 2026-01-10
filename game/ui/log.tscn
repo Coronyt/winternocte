@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://13ivy26mprof"]
+[gd_scene load_steps=2 format=3 uid="uid://13ivy26mprof"]
 
 [ext_resource type="Script" uid="uid://d3i1gug1dcdky" path="res://src/game/ui/log.gd" id="1_snhvb"]
-[ext_resource type="PackedScene" uid="uid://c1udaga2s5dh5" path="res://game/ui/log_message.tscn" id="2_bwoix"]
 
 [node name="_log" type="Control"]
 layout_mode = 3
@@ -18,6 +17,3 @@ offset_right = 1280.0
 offset_bottom = 40.0
 theme_override_constants/separation = 0
 alignment = 2
-
-[node name="_log_message" parent="_log_window" instance=ExtResource("2_bwoix")]
-layout_mode = 2
