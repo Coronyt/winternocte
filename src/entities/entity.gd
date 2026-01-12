@@ -9,6 +9,9 @@ var pos: Position = Position.new(pos_x, pos_y) # default 1,1
 # should map to an ASCII character via Atlas.entities
 var id: int
 
+# TODO - this is probably a temporary solution? should decide where to store display names
+var entity_name: String
+
 func _ready():
 	self.pos.x = pos_x
 	self.pos.y = pos_y

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dhi3cercrys64"]
+[gd_scene load_steps=15 format=3 uid="uid://dhi3cercrys64"]
 
 [ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://src/world/world.gd" id="1_juwqy"]
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="2_l88xf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blmdix2uy4n10" path="res://game/row.tscn" id="4_otli2"]
 [ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://src/entity_group.gd" id="5_7q0dj"]
 [ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://src/entities/door.gd" id="6_sdcdd"]
+[ext_resource type="Script" uid="uid://dosehifrbupkm" path="res://src/entities/items/iron_sword.gd" id="7_ibklf"]
 [ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://src/entities/player.gd" id="7_xyrhu"]
 [ext_resource type="PackedScene" uid="uid://13ivy26mprof" path="res://game/ui/log.tscn" id="8_0q2ew"]
 
@@ -1392,6 +1393,12 @@ pos_y = 10
 script = ExtResource("6_sdcdd")
 pos_x = 32
 pos_y = 9
+
+[node name="Sword1" type="Node" parent="_entities"]
+script = ExtResource("7_ibklf")
+pos_x = 24
+pos_y = 11
+metadata/_custom_type_script = "uid://cld1iec8a1vx8"
 
 [node name="Player" type="Node" parent="_entities"]
 script = ExtResource("7_xyrhu")

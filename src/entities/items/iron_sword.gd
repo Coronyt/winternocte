@@ -6,3 +6,4 @@ func _init():
 	#self.pos.x = 35
 	#self.pos.y = 19
 	self.id = 4
+	self.entity_name = "Iron Sword"

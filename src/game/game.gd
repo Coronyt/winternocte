@@ -48,8 +48,20 @@ func update_cells(canvas: Canvas):
 # will render all entities in the given list over the canvas
 func render_entities(canvas: Canvas, entities: EntityGroup):
 	for entity: Entity in entities.get_children():
+		if entity is Item:
+			if entity.stored:
+				# do not render stored items to the canvas
+				continue
 		var cell = canvas.get_cell(entity.pos)
 		cell.set_entity(entity)
+		# ___
+		#if entity is not Item:
+			#var cell = canvas.get_cell(entity.pos)
+			#cell.set_entity(entity)
+		#if entity is Item:
+			#if !entity.stored:
+				#var cell = canvas.get_cell(entity.pos)
+				#cell.set_entity(entity)
 
 var action_queue: Array[Action] = []
 
