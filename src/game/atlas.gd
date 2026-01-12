@@ -17,4 +17,9 @@ var entities: Dictionary[int, Definition] = {
 	1 : Definition.new("@", []), # player
 	2 : Definition.new("+", []), # door (closed)
 	3 : Definition.new("-", []), # door (open)
+	4 : Definition.new("/", []), # iron sword
 }
+
+#var items: Dictionary[int, Definition] = {
+	#1 : Definition.new("/", []), # iron sword
+#}
