@@ -1,7 +1,14 @@
 class_name Entity extends Node
 
+@export var pos_x: int = 1
+@export var pos_y: int = 1
+
 # all entities should have a position so they can be rendered to the canvas
-var pos: Position = Position.new(1, 1) # default 1,1
+var pos: Position = Position.new(pos_x, pos_y) # default 1,1
 
 # should map to an ASCII character via Atlas.entities
 var id: int
+
+func _ready():
+	self.pos.x = pos_x
+	self.pos.y = pos_y
