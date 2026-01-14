@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dhi3cercrys64"]
+[gd_scene load_steps=24 format=3 uid="uid://dhi3cercrys64"]
 
 [ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://src/world/world.gd" id="1_juwqy"]
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="2_l88xf"]
@@ -43,6 +43,20 @@ border_width_bottom = 1
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rddb8"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j15d7"]
+bg_color = Color(1, 1, 1, 1)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7c85"]
+bg_color = Color(0, 0, 0, 1)
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ib04"]
+
 [sub_resource type="Animation" id="Animation_ibklf"]
 resource_name = "open_inv"
 length = 0.5
@@ -54,7 +68,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.083333336, 0, 0, 0),
+"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0, 820, -0.083333336, 76.66667, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 tracks/1/type = "bezier"
@@ -65,7 +79,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(720, -0.25, 0, 0.25, 0, 45, -0.083333336, 112.5, 0, 0),
+"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0, 45, -0.083333336, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 
@@ -79,7 +93,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(820, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -90,7 +104,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(720, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -105,7 +119,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.083333336, 0, 0, 0),
+"points": PackedFloat32Array(820, -0.25, 0, 0.25, 0, 1280, -0.083333336, -76.66667, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 tracks/1/type = "bezier"
@@ -116,7 +130,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0, 720, -0.083333336, -112.5, 0, 0),
+"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0, 45, -0.083333336, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 
@@ -1699,8 +1713,6 @@ text = "CHR:12"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_log" parent="." instance=ExtResource("8_0q2ew")]
-
 [node name="_inventory" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1710,19 +1722,96 @@ script = ExtResource("10_6ib04")
 
 [node name="_inventory_bg" type="Panel" parent="_inventory"]
 layout_mode = 0
-offset_top = 720.0
-offset_right = 1280.0
-offset_bottom = 1395.0002
+offset_left = 820.0
+offset_top = 45.0
+offset_right = 1280.0007
+offset_bottom = 719.99963
 theme_override_styles/panel = SubResource("StyleBoxFlat_rddb8")
 
 [node name="_inventory_list" type="VBoxContainer" parent="_inventory/_inventory_bg"]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 1270.0
+offset_right = 450.0
 offset_bottom = 665.0
+theme_override_constants/separation = 10
+
+[node name="_inventory_header" type="RichTextLabel" parent="_inventory/_inventory_bg/_inventory_list"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
+text = "Player's inventory"
+horizontal_alignment = 2
+
+[node name="_inventory_entry" type="Panel" parent="_inventory/_inventory_bg/_inventory_list"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j15d7")
+
+[node name="_item_name" type="RichTextLabel" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 205.0
+offset_bottom = 25.0
+theme_override_fonts/normal_font = ExtResource("2_l88xf")
+theme_override_font_sizes/normal_font_size = 14
+text = "Iron sword +0"
+vertical_alignment = 1
+
+[node name="_item_options" type="Control" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry"]
+anchors_preset = 0
+offset_right = 25.0
+offset_bottom = 26.0
+
+[node name="_option_examine" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 3.0
+offset_right = 275.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("2_l88xf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
+text = "examine"
+
+[node name="_option_drop" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 3.0
+offset_right = 315.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("2_l88xf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
+text = "drop
+"
+
+[node name="_option_consume" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 3.0
+offset_right = 381.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("2_l88xf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
+text = "consume"
+
+[node name="_option_equip" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 3.0
+offset_right = 430.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("2_l88xf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
+text = "equip"
 
 [node name="_inventory_anims" type="AnimationPlayer" parent="_inventory"]
 libraries = {
 &"": SubResource("AnimationLibrary_rddb8")
 }
+
+[node name="_log" parent="." instance=ExtResource("8_0q2ew")]
