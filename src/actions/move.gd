@@ -45,15 +45,31 @@ func check_collision() -> bool:
 		return false
 	return true
 
-# TODO
-func check_bounds():
-	pass
+# will check if the target destination is out of the bound of the current level
+# TODO - will then need to implement a second check: is there another level in this direction on the world map?
+	# second check should probably happen in the perform() function below
+	# if so, then the level will need to be rendered, and the character will need to be moved to the next level
+		# the character will need to appear on the same x-level, and on the correct (opposite) side of the screen
+func check_bounds() -> bool:
+	# x-axis boundaries:
+		# <0 = we are attempting to exit the map left
+		# >=64 = we are attempting to exit the map right
+	# y-axis boundaries:
+		# <0 = we are attempting to exit the map through the top
+		# >=24 = we are attempting to exit the map through the bottom
+	if cand_x < 0 or cand_x >= 64:
+		return true
+	if cand_y < 0 or cand_y >= 24:
+		return true
+	return false
 
 # move the actor's position coords to the target destination
 func perform():
 	# ___
-	# TODO - need to check if target position is valid first
-	# TODO - then after that check is implemented, we can implement level-changing on the world map
+	# check if target position is valid first
+	if check_bounds():
+		# TODO - implement level-changing on the world map
+		return # for now block all movement that would exit the level
 	# ___
 	if self.dir == Game.Direction.UP and check_collision():
 		self.actor.pos.y = self.actor.pos.y - 1
