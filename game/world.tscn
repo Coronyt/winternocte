@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dhi3cercrys64"]
+[gd_scene format=3 uid="uid://dhi3cercrys64"]
 
 [ext_resource type="Script" uid="uid://bcpnfhitppw2k" path="res://src/world/world.gd" id="1_juwqy"]
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="2_l88xf"]
@@ -57,32 +57,6 @@ border_width_bottom = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ib04"]
 
-[sub_resource type="Animation" id="Animation_ibklf"]
-resource_name = "open_inv"
-length = 0.5
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("_inventory_bg:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0, 820, -0.083333336, 76.66667, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("_inventory_bg:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0, 45, -0.083333336, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
-}
-
 [sub_resource type="Animation" id="Animation_6ib04"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -92,8 +66,8 @@ tracks/0/path = NodePath("_inventory_bg:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(820, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -103,7 +77,7 @@ tracks/1/path = NodePath("_inventory_bg:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(45, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
@@ -134,6 +108,32 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5)
 }
 
+[sub_resource type="Animation" id="Animation_ibklf"]
+resource_name = "open_inv"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("_inventory_bg:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(1280, -0.25, 0, 0.25, 0, 820, -0.083333336, 76.66667, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("_inventory_bg:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(45, -0.25, 0, 0.25, 0, 45, -0.083333336, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rddb8"]
 _data = {
 &"RESET": SubResource("Animation_6ib04"),
@@ -141,21 +141,21 @@ _data = {
 &"open_inv": SubResource("Animation_ibklf")
 }
 
-[node name="_world" type="Node"]
+[node name="_world" type="Node" unique_id=493422094]
 script = ExtResource("1_juwqy")
 
-[node name="_rulers" type="Control" parent="."]
+[node name="_rulers" type="Control" parent="." unique_id=1309399137]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="_ruler_h" type="Control" parent="_rulers"]
+[node name="_ruler_h" type="Control" parent="_rulers" unique_id=1774649377]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="_ruler_h_1" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_1" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=739083919]
 layout_mode = 0
 offset_top = -30.0
 offset_right = 20.0
@@ -167,7 +167,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_2" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_2" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=437103149]
 layout_mode = 0
 offset_left = 20.0
 offset_top = -50.0
@@ -181,7 +181,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_3" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_3" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=893578278]
 layout_mode = 0
 offset_left = 40.0
 offset_top = -30.0
@@ -194,7 +194,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_4" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_4" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=629334282]
 layout_mode = 0
 offset_left = 60.0
 offset_top = -50.0
@@ -208,7 +208,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_5" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_5" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1353057944]
 layout_mode = 0
 offset_left = 80.0
 offset_top = -30.0
@@ -221,7 +221,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_6" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_6" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=633572805]
 layout_mode = 0
 offset_left = 100.0
 offset_top = -50.0
@@ -235,7 +235,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_7" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_7" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1416164385]
 layout_mode = 0
 offset_left = 120.0
 offset_top = -30.0
@@ -248,7 +248,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_8" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_8" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1908700307]
 layout_mode = 0
 offset_left = 140.0
 offset_top = -50.0
@@ -262,7 +262,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_9" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_9" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=245338668]
 layout_mode = 0
 offset_left = 160.0
 offset_top = -30.0
@@ -275,7 +275,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_10" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_10" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=168471822]
 layout_mode = 0
 offset_left = 180.0
 offset_top = -50.0
@@ -289,7 +289,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_11" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_11" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=865861906]
 layout_mode = 0
 offset_left = 200.0
 offset_top = -30.0
@@ -302,7 +302,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_12" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_12" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=688307341]
 layout_mode = 0
 offset_left = 220.0
 offset_top = -50.0
@@ -316,7 +316,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_13" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_13" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1780482303]
 layout_mode = 0
 offset_left = 240.0
 offset_top = -30.0
@@ -329,7 +329,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_14" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_14" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=479841508]
 layout_mode = 0
 offset_left = 260.0
 offset_top = -50.0
@@ -343,7 +343,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_15" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_15" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1558146292]
 layout_mode = 0
 offset_left = 280.0
 offset_top = -30.0
@@ -356,7 +356,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_16" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_16" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1451314700]
 layout_mode = 0
 offset_left = 300.0
 offset_top = -50.0
@@ -370,7 +370,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_17" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_17" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=416794670]
 layout_mode = 0
 offset_left = 320.0
 offset_top = -30.0
@@ -383,7 +383,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_18" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_18" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1980470078]
 layout_mode = 0
 offset_left = 340.0
 offset_top = -50.0
@@ -397,7 +397,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_19" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_19" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=392860282]
 layout_mode = 0
 offset_left = 360.0
 offset_top = -30.0
@@ -410,7 +410,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_20" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_20" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1744204180]
 layout_mode = 0
 offset_left = 380.0
 offset_top = -50.0
@@ -424,7 +424,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_21" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_21" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=968190074]
 layout_mode = 0
 offset_left = 400.0
 offset_top = -30.0
@@ -437,7 +437,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_22" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_22" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1037295245]
 layout_mode = 0
 offset_left = 420.0
 offset_top = -50.0
@@ -451,7 +451,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_23" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_23" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=313781169]
 layout_mode = 0
 offset_left = 440.0
 offset_top = -30.0
@@ -464,7 +464,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_24" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_24" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=899171381]
 layout_mode = 0
 offset_left = 460.0
 offset_top = -50.0
@@ -478,7 +478,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_25" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_25" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1617928664]
 layout_mode = 0
 offset_left = 480.0
 offset_top = -30.0
@@ -491,7 +491,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_26" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_26" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2007618139]
 layout_mode = 0
 offset_left = 500.0
 offset_top = -50.0
@@ -505,7 +505,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_27" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_27" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=9697215]
 layout_mode = 0
 offset_left = 520.0
 offset_top = -30.0
@@ -518,7 +518,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_28" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_28" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=118846072]
 layout_mode = 0
 offset_left = 540.0
 offset_top = -50.0
@@ -532,7 +532,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_29" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_29" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1715402906]
 layout_mode = 0
 offset_left = 560.0
 offset_top = -30.0
@@ -545,7 +545,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_30" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_30" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2125249004]
 layout_mode = 0
 offset_left = 580.0
 offset_top = -50.0
@@ -559,7 +559,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_31" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_31" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1671696268]
 layout_mode = 0
 offset_left = 600.0
 offset_top = -30.0
@@ -572,7 +572,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_32" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_32" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=737943857]
 layout_mode = 0
 offset_left = 620.0
 offset_top = -50.0
@@ -586,7 +586,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_33" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_33" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2055984881]
 layout_mode = 0
 offset_left = 640.0
 offset_top = -30.0
@@ -599,7 +599,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_34" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_34" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=495558841]
 layout_mode = 0
 offset_left = 660.0
 offset_top = -50.0
@@ -613,7 +613,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_35" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_35" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=734767735]
 layout_mode = 0
 offset_left = 680.0
 offset_top = -30.0
@@ -626,7 +626,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_36" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_36" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1048321528]
 layout_mode = 0
 offset_left = 700.0
 offset_top = -50.0
@@ -640,7 +640,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_37" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_37" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=456576956]
 layout_mode = 0
 offset_left = 720.0
 offset_top = -30.0
@@ -653,7 +653,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_38" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_38" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=823356698]
 layout_mode = 0
 offset_left = 740.0
 offset_top = -50.0
@@ -667,7 +667,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_39" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_39" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=800445139]
 layout_mode = 0
 offset_left = 760.0
 offset_top = -30.0
@@ -680,7 +680,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_40" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_40" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=675764871]
 layout_mode = 0
 offset_left = 780.0
 offset_top = -50.0
@@ -694,7 +694,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_41" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_41" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1884837429]
 layout_mode = 0
 offset_left = 800.0
 offset_top = -30.0
@@ -707,7 +707,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_42" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_42" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1427137457]
 layout_mode = 0
 offset_left = 820.0
 offset_top = -50.0
@@ -721,7 +721,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_43" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_43" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2621441]
 layout_mode = 0
 offset_left = 840.0
 offset_top = -30.0
@@ -734,7 +734,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_44" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_44" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=786340673]
 layout_mode = 0
 offset_left = 860.0
 offset_top = -50.0
@@ -748,7 +748,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_45" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_45" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1878820392]
 layout_mode = 0
 offset_left = 880.0
 offset_top = -30.0
@@ -761,7 +761,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_46" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_46" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=568421907]
 layout_mode = 0
 offset_left = 900.0
 offset_top = -50.0
@@ -775,7 +775,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_47" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_47" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1712844584]
 layout_mode = 0
 offset_left = 920.0
 offset_top = -30.0
@@ -788,7 +788,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_48" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_48" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=824915226]
 layout_mode = 0
 offset_left = 940.0
 offset_top = -50.0
@@ -802,7 +802,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_49" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_49" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=146256069]
 layout_mode = 0
 offset_left = 960.0
 offset_top = -30.0
@@ -815,7 +815,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_50" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_50" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2029020966]
 layout_mode = 0
 offset_left = 980.0
 offset_top = -50.0
@@ -829,7 +829,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_51" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_51" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=869505503]
 layout_mode = 0
 offset_left = 1000.0
 offset_top = -30.0
@@ -842,7 +842,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_52" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_52" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=392938232]
 layout_mode = 0
 offset_left = 1020.0
 offset_top = -50.0
@@ -856,7 +856,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_53" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_53" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=220823283]
 layout_mode = 0
 offset_left = 1040.0
 offset_top = -30.0
@@ -869,7 +869,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_54" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_54" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=340693308]
 layout_mode = 0
 offset_left = 1060.0
 offset_top = -50.0
@@ -883,7 +883,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_55" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_55" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2120334946]
 layout_mode = 0
 offset_left = 1080.0
 offset_top = -30.0
@@ -896,7 +896,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_56" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_56" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2123883333]
 layout_mode = 0
 offset_left = 1100.0
 offset_top = -50.0
@@ -910,7 +910,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_57" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_57" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1046477352]
 layout_mode = 0
 offset_left = 1120.0
 offset_top = -30.0
@@ -923,7 +923,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_58" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_58" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1694092144]
 layout_mode = 0
 offset_left = 1140.0
 offset_top = -50.0
@@ -937,7 +937,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_59" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_59" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=140767559]
 layout_mode = 0
 offset_left = 1160.0
 offset_top = -30.0
@@ -950,7 +950,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_60" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_60" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=2032373219]
 layout_mode = 0
 offset_left = 1180.0
 offset_top = -50.0
@@ -964,7 +964,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_61" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_61" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=942560282]
 layout_mode = 0
 offset_left = 1200.0
 offset_top = -30.0
@@ -977,7 +977,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_62" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_62" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=462742240]
 layout_mode = 0
 offset_left = 1220.0
 offset_top = -50.0
@@ -991,7 +991,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_63" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_63" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1652447224]
 layout_mode = 0
 offset_left = 1240.0
 offset_top = -30.0
@@ -1004,7 +1004,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_64" type="RichTextLabel" parent="_rulers/_ruler_h"]
+[node name="_ruler_h_64" type="RichTextLabel" parent="_rulers/_ruler_h" unique_id=1285656719]
 layout_mode = 0
 offset_left = 1260.0
 offset_top = -50.0
@@ -1018,12 +1018,12 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_v" type="Control" parent="_rulers"]
+[node name="_ruler_v" type="Control" parent="_rulers" unique_id=566169324]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="_ruler_h_1" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_1" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1921027377]
 layout_mode = 0
 offset_left = -25.0
 offset_right = -5.0
@@ -1036,7 +1036,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_2" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_2" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1219615895]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 30.0
@@ -1050,7 +1050,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_3" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_3" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1088739328]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 60.0
@@ -1064,7 +1064,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_4" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_4" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1729997562]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 90.0
@@ -1078,7 +1078,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_5" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_5" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1868966654]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 120.0
@@ -1092,7 +1092,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_6" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_6" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1606515463]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 150.0
@@ -1106,7 +1106,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_7" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_7" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=689010897]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 180.0
@@ -1120,7 +1120,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_8" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_8" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1090253356]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 210.0
@@ -1134,7 +1134,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_9" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_9" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1538548511]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 240.0
@@ -1148,7 +1148,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_10" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_10" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1405374129]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 270.0
@@ -1162,7 +1162,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_11" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_11" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=630687434]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 300.0
@@ -1176,7 +1176,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_12" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_12" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1395791588]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 330.0
@@ -1190,7 +1190,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_13" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_13" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=871620107]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 360.0
@@ -1204,7 +1204,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_14" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_14" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=27843590]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 390.0
@@ -1218,7 +1218,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_15" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_15" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1576710129]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 420.0
@@ -1232,7 +1232,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_16" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_16" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1126986084]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 450.0
@@ -1246,7 +1246,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_17" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_17" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=996040200]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 480.0
@@ -1260,7 +1260,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_18" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_18" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1754697309]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 510.0
@@ -1274,7 +1274,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_19" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_19" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1943108148]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 540.0
@@ -1288,7 +1288,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_20" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_20" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=376587224]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 570.0
@@ -1302,7 +1302,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_21" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_21" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=581688693]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 600.0
@@ -1316,7 +1316,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_22" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_22" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1684924865]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 630.0
@@ -1330,7 +1330,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_23" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_23" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=1101378365]
 layout_mode = 0
 offset_left = -25.0
 offset_top = 660.0
@@ -1344,7 +1344,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_ruler_h_24" type="RichTextLabel" parent="_rulers/_ruler_v"]
+[node name="_ruler_h_24" type="RichTextLabel" parent="_rulers/_ruler_v" unique_id=986184328]
 layout_mode = 0
 offset_left = -40.0
 offset_top = 690.0
@@ -1358,167 +1358,167 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_canvas" type="Control" parent="."]
+[node name="_canvas" type="Control" parent="." unique_id=1952054758]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("3_8afa7")
 
-[node name="_row_1" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_1" parent="_canvas" unique_id=1776211344 instance=ExtResource("4_otli2")]
 layout_mode = 0
 
-[node name="_row_2" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_2" parent="_canvas" unique_id=1195593874 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 30.0
 offset_bottom = 60.0
 
-[node name="_row_3" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_3" parent="_canvas" unique_id=1632994721 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 60.0
 offset_bottom = 90.0
 
-[node name="_row_4" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_4" parent="_canvas" unique_id=1544491216 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 90.0
 offset_bottom = 120.0
 
-[node name="_row_5" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_5" parent="_canvas" unique_id=415365546 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 120.0
 offset_bottom = 150.0
 
-[node name="_row_6" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_6" parent="_canvas" unique_id=922665538 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 150.0
 offset_bottom = 180.0
 
-[node name="_row_7" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_7" parent="_canvas" unique_id=1569119651 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 180.0
 offset_bottom = 210.0
 
-[node name="_row_8" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_8" parent="_canvas" unique_id=891110660 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 210.0
 offset_bottom = 240.0
 
-[node name="_row_9" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_9" parent="_canvas" unique_id=1240049737 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 240.0
 offset_bottom = 270.0
 
-[node name="_row_10" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_10" parent="_canvas" unique_id=16535334 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 270.0
 offset_bottom = 300.0
 
-[node name="_row_11" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_11" parent="_canvas" unique_id=1542292119 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 300.0
 offset_bottom = 330.0
 
-[node name="_row_12" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_12" parent="_canvas" unique_id=609687861 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 330.0
 offset_bottom = 360.0
 
-[node name="_row_13" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_13" parent="_canvas" unique_id=410947938 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 360.0
 offset_bottom = 390.0
 
-[node name="_row_14" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_14" parent="_canvas" unique_id=1252322618 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 390.0
 offset_bottom = 420.0
 
-[node name="_row_15" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_15" parent="_canvas" unique_id=1415985977 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 420.0
 offset_bottom = 450.0
 
-[node name="_row_16" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_16" parent="_canvas" unique_id=374586890 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 450.0
 offset_bottom = 480.0
 
-[node name="_row_17" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_17" parent="_canvas" unique_id=1174266767 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 480.0
 offset_bottom = 510.0
 
-[node name="_row_18" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_18" parent="_canvas" unique_id=1821793086 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 510.0
 offset_bottom = 540.0
 
-[node name="_row_19" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_19" parent="_canvas" unique_id=940089199 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 540.0
 offset_bottom = 570.0
 
-[node name="_row_20" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_20" parent="_canvas" unique_id=943143984 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 570.0
 offset_bottom = 600.0
 
-[node name="_row_21" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_21" parent="_canvas" unique_id=1740344268 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 600.0
 offset_bottom = 630.0
 
-[node name="_row_22" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_22" parent="_canvas" unique_id=1970832496 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 630.0
 offset_bottom = 660.0
 
-[node name="_row_23" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_23" parent="_canvas" unique_id=1509126301 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 660.0
 offset_bottom = 690.0
 
-[node name="_row_24" parent="_canvas" instance=ExtResource("4_otli2")]
+[node name="_row_24" parent="_canvas" unique_id=1770763268 instance=ExtResource("4_otli2")]
 layout_mode = 0
 offset_top = 690.0
 offset_bottom = 720.0
 
-[node name="_entities" type="Node" parent="."]
+[node name="_entities" type="Node" parent="." unique_id=139781341]
 script = ExtResource("5_7q0dj")
 
-[node name="Door1" type="Node" parent="_entities"]
+[node name="Door1" type="Node" parent="_entities" unique_id=675449932]
 script = ExtResource("6_sdcdd")
 pos_x = 8
 pos_y = 10
 
-[node name="Door2" type="Node" parent="_entities"]
+[node name="Door2" type="Node" parent="_entities" unique_id=1724501891]
 script = ExtResource("6_sdcdd")
 pos_x = 32
 pos_y = 9
 
-[node name="Sword1" type="Node" parent="_entities"]
+[node name="Sword1" type="Node" parent="_entities" unique_id=268577117]
 script = ExtResource("7_ibklf")
 pos_x = 24
 pos_y = 11
 metadata/_custom_type_script = "uid://cld1iec8a1vx8"
 
-[node name="Player" type="Node" parent="_entities"]
+[node name="Player" type="Node" parent="_entities" unique_id=1876505213]
 script = ExtResource("7_xyrhu")
 
-[node name="_hud" type="Control" parent="."]
+[node name="_hud" type="Control" parent="." unique_id=1931001398]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="_hud_panel" type="Panel" parent="_hud"]
+[node name="_hud_panel" type="Panel" parent="_hud" unique_id=498678523]
 custom_minimum_size = Vector2(1280, 30)
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 45.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_m4twg")
 
-[node name="_hud_name" type="RichTextLabel" parent="_hud/_hud_panel"]
+[node name="_hud_name" type="RichTextLabel" parent="_hud/_hud_panel" unique_id=1797314405]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
@@ -1531,7 +1531,7 @@ text = "Player"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_hud_level" type="RichTextLabel" parent="_hud/_hud_panel"]
+[node name="_hud_level" type="RichTextLabel" parent="_hud/_hud_panel" unique_id=1039412185]
 layout_mode = 0
 offset_left = 170.0
 offset_top = 10.0
@@ -1544,14 +1544,14 @@ text = "Lvl 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_hud_bars" type="Control" parent="_hud/_hud_panel"]
+[node name="_hud_bars" type="Control" parent="_hud/_hud_panel" unique_id=656451670]
 anchors_preset = 0
 offset_left = 250.0
 offset_top = 10.0
 offset_right = 820.0
 offset_bottom = 40.0
 
-[node name="_hud_hp_bar" type="ProgressBar" parent="_hud/_hud_panel/_hud_bars"]
+[node name="_hud_hp_bar" type="ProgressBar" parent="_hud/_hud_panel/_hud_bars" unique_id=1129359447]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 5.0
@@ -1564,14 +1564,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ibklf")
 value = 70.0
 show_percentage = false
 
-[node name="_hud_hp_panel" type="Panel" parent="_hud/_hud_panel/_hud_bars/_hud_hp_bar"]
+[node name="_hud_hp_panel" type="Panel" parent="_hud/_hud_panel/_hud_bars/_hud_hp_bar" unique_id=562852953]
 layout_mode = 0
 offset_top = -5.0
 offset_right = 220.0
 offset_bottom = 25.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cjey8")
 
-[node name="_hud_hp_label" type="RichTextLabel" parent="_hud/_hud_panel/_hud_bars/_hud_hp_bar"]
+[node name="_hud_hp_label" type="RichTextLabel" parent="_hud/_hud_panel/_hud_bars/_hud_hp_bar" unique_id=357337998]
 layout_mode = 0
 offset_left = -40.0
 offset_top = -5.0
@@ -1583,7 +1583,7 @@ text = "HP:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_hud_mp_bar" type="ProgressBar" parent="_hud/_hud_panel/_hud_bars"]
+[node name="_hud_mp_bar" type="ProgressBar" parent="_hud/_hud_panel/_hud_bars" unique_id=951296110]
 layout_mode = 0
 offset_left = 310.0
 offset_top = 5.0
@@ -1596,14 +1596,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ibklf")
 value = 70.0
 show_percentage = false
 
-[node name="_hud_mp_panel" type="Panel" parent="_hud/_hud_panel/_hud_bars/_hud_mp_bar"]
+[node name="_hud_mp_panel" type="Panel" parent="_hud/_hud_panel/_hud_bars/_hud_mp_bar" unique_id=1813012698]
 layout_mode = 0
 offset_top = -5.0
 offset_right = 105.0
 offset_bottom = 25.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cjey8")
 
-[node name="_hud_mp_label" type="RichTextLabel" parent="_hud/_hud_panel/_hud_bars/_hud_mp_bar"]
+[node name="_hud_mp_label" type="RichTextLabel" parent="_hud/_hud_panel/_hud_bars/_hud_mp_bar" unique_id=2137305981]
 layout_mode = 0
 offset_left = -40.0
 offset_top = -5.0
@@ -1615,7 +1615,7 @@ text = "MP:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_hud_xp_bar" type="ProgressBar" parent="_hud/_hud_panel/_hud_bars"]
+[node name="_hud_xp_bar" type="ProgressBar" parent="_hud/_hud_panel/_hud_bars" unique_id=517182328]
 layout_mode = 0
 offset_left = 465.0
 offset_top = 5.0
@@ -1628,14 +1628,14 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ibklf")
 value = 70.0
 show_percentage = false
 
-[node name="_hud_xp_panel" type="Panel" parent="_hud/_hud_panel/_hud_bars/_hud_xp_bar"]
+[node name="_hud_xp_panel" type="Panel" parent="_hud/_hud_panel/_hud_bars/_hud_xp_bar" unique_id=91892377]
 layout_mode = 0
 offset_top = -5.0
 offset_right = 105.0
 offset_bottom = 25.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_cjey8")
 
-[node name="_hud_xp_label" type="RichTextLabel" parent="_hud/_hud_panel/_hud_bars/_hud_xp_bar"]
+[node name="_hud_xp_label" type="RichTextLabel" parent="_hud/_hud_panel/_hud_bars/_hud_xp_bar" unique_id=1061665220]
 layout_mode = 0
 offset_left = -40.0
 offset_top = -5.0
@@ -1647,14 +1647,14 @@ text = "XP:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_hud_stats" type="Control" parent="_hud/_hud_panel"]
+[node name="_hud_stats" type="Control" parent="_hud/_hud_panel" unique_id=261856672]
 anchors_preset = 0
 offset_left = 830.0
 offset_top = 10.0
 offset_right = 1270.0
 offset_bottom = 40.0
 
-[node name="hud_stat_1" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats"]
+[node name="hud_stat_1" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats" unique_id=63101031]
 layout_mode = 0
 offset_right = 80.0
 offset_bottom = 30.0
@@ -1665,7 +1665,7 @@ text = "STR:10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="hud_stat_2" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats"]
+[node name="hud_stat_2" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats" unique_id=1164692548]
 layout_mode = 0
 offset_left = 90.0
 offset_right = 170.0
@@ -1677,7 +1677,7 @@ text = "DEX:12"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="hud_stat_3" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats"]
+[node name="hud_stat_3" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats" unique_id=1664761197]
 layout_mode = 0
 offset_left = 180.0
 offset_right = 260.0
@@ -1689,7 +1689,7 @@ text = "INT:8"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="hud_stat_4" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats"]
+[node name="hud_stat_4" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats" unique_id=632189735]
 layout_mode = 0
 offset_left = 270.0
 offset_right = 350.0
@@ -1701,7 +1701,7 @@ text = "VIT:11"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="hud_stat_5" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats"]
+[node name="hud_stat_5" type="RichTextLabel" parent="_hud/_hud_panel/_hud_stats" unique_id=247323036]
 layout_mode = 0
 offset_left = 360.0
 offset_right = 440.0
@@ -1713,22 +1713,22 @@ text = "CHR:12"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="_inventory" type="Control" parent="."]
+[node name="_inventory" type="Control" parent="." unique_id=1658368386]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_6ib04")
 
-[node name="_inventory_bg" type="Panel" parent="_inventory"]
+[node name="_inventory_bg" type="Panel" parent="_inventory" unique_id=414448147]
 layout_mode = 0
-offset_left = 820.0
+offset_left = 1280.0
 offset_top = 45.0
-offset_right = 1280.0007
+offset_right = 1740.0005
 offset_bottom = 719.99963
 theme_override_styles/panel = SubResource("StyleBoxFlat_rddb8")
 
-[node name="_inventory_list" type="VBoxContainer" parent="_inventory/_inventory_bg"]
+[node name="_inventory_list" type="VBoxContainer" parent="_inventory/_inventory_bg" unique_id=848705557]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
@@ -1736,19 +1736,19 @@ offset_right = 450.0
 offset_bottom = 665.0
 theme_override_constants/separation = 10
 
-[node name="_inventory_header" type="RichTextLabel" parent="_inventory/_inventory_bg/_inventory_list"]
+[node name="_inventory_header" type="RichTextLabel" parent="_inventory/_inventory_bg/_inventory_list" unique_id=815026164]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_l88xf")
 text = "Player's inventory"
 horizontal_alignment = 2
 
-[node name="_inventory_entry" type="Panel" parent="_inventory/_inventory_bg/_inventory_list"]
+[node name="_inventory_entry" type="Panel" parent="_inventory/_inventory_bg/_inventory_list" unique_id=1774270126]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_j15d7")
 
-[node name="_item_name" type="RichTextLabel" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry"]
+[node name="_item_name" type="RichTextLabel" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry" unique_id=2076528531]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
@@ -1759,12 +1759,12 @@ theme_override_font_sizes/normal_font_size = 14
 text = "Iron sword +0"
 vertical_alignment = 1
 
-[node name="_item_options" type="Control" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry"]
+[node name="_item_options" type="Control" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry" unique_id=1063795234]
 anchors_preset = 0
 offset_right = 25.0
 offset_bottom = 26.0
 
-[node name="_option_examine" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+[node name="_option_examine" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options" unique_id=1918587719]
 layout_mode = 0
 offset_left = 210.0
 offset_top = 3.0
@@ -1775,7 +1775,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
 text = "examine"
 
-[node name="_option_drop" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+[node name="_option_drop" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options" unique_id=1473655407]
 layout_mode = 0
 offset_left = 275.0
 offset_top = 3.0
@@ -1787,7 +1787,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
 text = "drop
 "
 
-[node name="_option_consume" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+[node name="_option_consume" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options" unique_id=1939499345]
 layout_mode = 0
 offset_left = 315.0
 offset_top = 3.0
@@ -1798,7 +1798,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
 text = "consume"
 
-[node name="_option_equip" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options"]
+[node name="_option_equip" type="Button" parent="_inventory/_inventory_bg/_inventory_list/_inventory_entry/_item_options" unique_id=858421150]
 layout_mode = 0
 offset_left = 380.0
 offset_top = 3.0
@@ -1809,9 +1809,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_s7c85")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6ib04")
 text = "equip"
 
-[node name="_inventory_anims" type="AnimationPlayer" parent="_inventory"]
-libraries = {
-&"": SubResource("AnimationLibrary_rddb8")
-}
+[node name="_inventory_anims" type="AnimationPlayer" parent="_inventory" unique_id=830883363]
+libraries/ = SubResource("AnimationLibrary_rddb8")
 
-[node name="_log" parent="." instance=ExtResource("8_0q2ew")]
+[node name="_log" parent="." unique_id=368285037 instance=ExtResource("8_0q2ew")]
