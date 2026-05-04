@@ -23,6 +23,7 @@ config/icon="res://assets/icon.svg"
 
 Game="*res://src/game/game.gd"
 Atlas="*res://src/game/atlas.gd"
+WorldDictionary="*uid://rutk6tfeyy2k"
 
 [display]
 
