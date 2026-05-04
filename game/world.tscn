@@ -4,10 +4,7 @@
 [ext_resource type="FontFile" uid="uid://c0tvwx7yxl2g3" path="res://assets/fonts/TerminusTTFWindows-4.49.3.ttf" id="2_l88xf"]
 [ext_resource type="Script" uid="uid://bemlpqgnhsqna" path="res://src/world/canvas.gd" id="3_8afa7"]
 [ext_resource type="PackedScene" uid="uid://blmdix2uy4n10" path="res://game/row.tscn" id="4_otli2"]
-[ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://src/entity_group.gd" id="5_7q0dj"]
-[ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://src/entities/door.gd" id="6_sdcdd"]
-[ext_resource type="Script" uid="uid://dosehifrbupkm" path="res://src/entities/items/iron_sword.gd" id="7_ibklf"]
-[ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://src/entities/player.gd" id="7_xyrhu"]
+[ext_resource type="PackedScene" uid="uid://cqwmmitafayrr" path="res://src/world/levels/00/00_entities.tscn" id="5_m4twg"]
 [ext_resource type="PackedScene" uid="uid://13ivy26mprof" path="res://game/ui/log.tscn" id="8_0q2ew"]
 [ext_resource type="Script" uid="uid://dmppiy7ebnq46" path="res://src/game/ui/inventory.gd" id="10_6ib04"]
 
@@ -1483,27 +1480,7 @@ layout_mode = 0
 offset_top = 690.0
 offset_bottom = 720.0
 
-[node name="_entities" type="Node" parent="." unique_id=139781341]
-script = ExtResource("5_7q0dj")
-
-[node name="Door1" type="Node" parent="_entities" unique_id=675449932]
-script = ExtResource("6_sdcdd")
-pos_x = 8
-pos_y = 10
-
-[node name="Door2" type="Node" parent="_entities" unique_id=1724501891]
-script = ExtResource("6_sdcdd")
-pos_x = 32
-pos_y = 9
-
-[node name="Sword1" type="Node" parent="_entities" unique_id=268577117]
-script = ExtResource("7_ibklf")
-pos_x = 24
-pos_y = 11
-metadata/_custom_type_script = "uid://cld1iec8a1vx8"
-
-[node name="Player" type="Node" parent="_entities" unique_id=1876505213]
-script = ExtResource("7_xyrhu")
+[node name="_entities" parent="." unique_id=886291009 instance=ExtResource("5_m4twg")]
 
 [node name="_hud" type="Control" parent="." unique_id=1931001398]
 layout_mode = 3

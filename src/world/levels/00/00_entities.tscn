@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cqwmmitafayrr"]
+
+[ext_resource type="Script" uid="uid://c00up2otct0u3" path="res://src/entity_group.gd" id="1_olxm4"]
+[ext_resource type="Script" uid="uid://mlq6via5rkqu" path="res://src/entities/door.gd" id="2_eske5"]
+[ext_resource type="Script" uid="uid://dosehifrbupkm" path="res://src/entities/items/iron_sword.gd" id="3_dakcf"]
+[ext_resource type="Script" uid="uid://c1bfx5dvmr2sx" path="res://src/entities/player.gd" id="4_crlyc"]
+
+[node name="_entities" type="Node" unique_id=886291009]
+script = ExtResource("1_olxm4")
+
+[node name="Door1" type="Node" parent="." unique_id=1467267029]
+script = ExtResource("2_eske5")
+pos_x = 8
+pos_y = 10
+
+[node name="Door2" type="Node" parent="." unique_id=1643833151]
+script = ExtResource("2_eske5")
+pos_x = 32
+pos_y = 9
+
+[node name="Sword1" type="Node" parent="." unique_id=924747856]
+script = ExtResource("3_dakcf")
+pos_x = 24
+pos_y = 11
+metadata/_custom_type_script = "uid://cld1iec8a1vx8"
+
+[node name="Player" type="Node" parent="." unique_id=934984337]
+script = ExtResource("4_crlyc")
